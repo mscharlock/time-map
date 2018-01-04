@@ -178,7 +178,8 @@ function addActivity(event) {
   console.log('li', li);
   console.log('ul.innerHTML', ul.innerHTML);
   var newAct = ul.innerHTML;
-  newAct == '<li>' + addedActivity.name + '</li>';
+  newAct === '<li>' + addedActivity.name + '</li>';
+
 
   // grabbing li created so it's attached to the object
 
@@ -190,4 +191,4 @@ function addActivity(event) {
 //   console.log(selectedActivity);
 // });
 //
-// form.addEventListener('submit', addActivity);
+form.addEventListener('submit', addActivity);
