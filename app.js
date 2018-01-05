@@ -13,7 +13,6 @@ var program = document.getElementById('programming');
 var startbtn = document.getElementById('start-btn');
 var stopbtn = document.getElementById('stop-btn');
 var form = document.getElementById('the-form');
-var thing = document.getElementById('thing')
 
 // global variables
 var activities = [];
@@ -179,13 +178,16 @@ function addActivity(event) {
   console.log('ul.innerHTML', ul.innerHTML);
   ul.innerHTML = '<li id="thing">' + addedActivity.name + '</li>';
   // grabbing li created so it's attached to the object
-
+  var thing = document.getElementById('thing');
+  thing.addEventListener('click', function() {
+    selectedActivity = activities[9];
+  });
 }
 
-
-thing.addEventListener('click', function() {
-  selectedActivity = activities[9];
-});
+//
+// thing.addEventListener('click', function() {
+//   selectedActivity = activities[9];
+// });
 //
 // var clickedActivity;
 // clickedActivity.addEventListener('click', function(){
